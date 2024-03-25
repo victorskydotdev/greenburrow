@@ -2,4 +2,122 @@
 
 .contact-form-section {
 	min-height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 7em;
+	padding-top: 5em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		min-height: 70vh;
+
+		.contact-card {
+			background: $primary-text-color;
+			min-height: 100px;
+			width: 100%;
+			margin-bottom: 2em;
+			padding: 2em;
+			border-radius: 20px;
+
+			.fa-solid {
+				color: $color-light;
+				display: inline-block;
+				margin-bottom: 2em;
+			}
+
+			.heading {
+				@include poppinsBoldMixin();
+				color: $color-light;
+				margin-bottom: 0.5em;
+			}
+
+			.text {
+				color: $color-light;
+				margin-bottom: 2em;
+			}
+
+			a {
+				color: $color-light;
+				text-decoration: underline;
+			}
+		}
+
+		.contact-form {
+			background: $color-light;
+			display: grid;
+			gap: 1em;
+			border-radius: 20px;
+			padding: 2em;
+			-webkit-box-shadow: 3px 6px 36px -1px rgba(0, 0, 0, 0.29);
+			-moz-box-shadow: 3px 6px 36px -1px rgba(0, 0, 0, 0.29);
+			box-shadow: 3px 6px 36px -1px rgba(0, 0, 0, 0.29);
+
+			.title {
+				@include fontMixin();
+				font-size: 2em;
+				margin-bottom: 0.6em;
+			}
+
+			p {
+				input {
+					width: 100%;
+					outline: none;
+					padding: 0.5em 1em;
+					border: 1px solid $primary-text-color;
+					border-radius: 20px;
+					@include poppinsRegularMixin();
+				}
+
+				textarea {
+					width: 100%;
+					outline: none;
+					min-height: 150px;
+					@include poppinsRegularMixin();
+					border-radius: 20px;
+					border: 1px solid $primary-text-color;
+					padding: 0.5em 1em;
+				}
+
+				button {
+					background: $primary-color;
+					border: none;
+					@include poppinsRegularMixin();
+					padding: 1em 5em;
+					border-radius: 10px;
+					color: $color-light;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			width: 70%;
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.container {
+			display: flex;
+			width: 80%;
+			gap: 2em;
+			justify-content: center;
+
+			.contact-card {
+				width: 400px;
+				height: fit-content;
+			}
+
+			.contact-form {
+				display: unset;
+
+				p {
+					margin-bottom: 0.6em;
+				}
+			}
+		}
+	}
 }
