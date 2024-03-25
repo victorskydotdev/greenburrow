@@ -1,0 +1,99 @@
+@import 'resets';
+
+.header {
+	height: 15vh;
+
+	.nav-wrap {
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		position: relative;
+
+		.logo-wrap {
+			a {
+				img {
+					width: 170px;
+				}
+			}
+		}
+
+		.navbar {
+			background: $primary-text-color;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			height: 290px;
+			z-index: 2;
+			width: 60%;
+			padding-top: 2.5em;
+			border-radius: 20px;
+			display: none;
+
+			.nav-links {
+				display: grid;
+				gap: 3em;
+				place-content: center;
+				text-align: center;
+
+				a {
+					color: $color-light;
+				}
+			}
+		}
+
+		.burger-wrap {
+			.open-menu {
+				background: $primary-text-color;
+				color: $color-light;
+				padding: 1em;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+
+			.close-menu {
+				background: red;
+				border: none;
+				padding: 1.1em 1.3em;
+				color: $color-light;
+				display: none;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.nav-wrap {
+			.navbar {
+				display: flex;
+
+				background: transparent;
+				position: unset;
+
+				height: unset;
+				z-index: 2;
+				width: unset;
+				padding-top: unset;
+				border-radius: 20px;
+
+				.nav-links {
+					display: flex;
+
+					li {
+						.link {
+							color: $primary-text-color;
+							@include poppinsMediumMixin();
+						}
+					}
+				}
+			}
+
+			.burger-wrap {
+				display: none;
+			}
+		}
+	}
+}

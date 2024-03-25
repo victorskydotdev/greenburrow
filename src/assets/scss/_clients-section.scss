@@ -1,0 +1,45 @@
+@import 'resets';
+
+.clients-section {
+	padding: 4em 0em;
+	margin-bottom: 5em;
+
+	.text-container {
+		width: 80%;
+		margin: 0 auto;
+
+		.heading {
+			@include fontMixin();
+			position: relative;
+			margin-bottom: 1em;
+			color: $primary-text-color;
+			font-size: 2em;
+			text-align: center;
+
+			@media screen and (min-width: 62em) {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	.container {
+		width: 80%;
+		margin: 0 auto;
+		display: grid;
+
+		place-content: center;
+
+		.img-wrap {
+			display: flex;
+			gap: 2em;
+
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+
+			.img {
+				width: 100px;
+			}
+		}
+	}
+}

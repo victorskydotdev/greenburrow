@@ -1,0 +1,59 @@
+// didact gothic
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+// poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+$primary-color: #68982a;
+$primary-text-color: #035141;
+$secondary-text-color: #676969;
+$color-light: #fff;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: $color-light;
+	overflow-x: hidden;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+@mixin fontMixin() {
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin poppinsRegularMixin() {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin poppinsMediumMixin() {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@mixin poppinsBoldMixin() {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}

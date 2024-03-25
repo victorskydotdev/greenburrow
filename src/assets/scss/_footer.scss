@@ -1,0 +1,70 @@
+@import 'resets';
+
+.footer {
+	padding-bottom: 2em;
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		display: grid;
+		gap: 2em;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			background: $primary-text-color;
+			height: 1px;
+			width: 100%;
+			bottom: 110%;
+		}
+
+		.links-wrap {
+			background: $primary-text-color;
+			display: grid;
+			gap: 2em;
+			padding: 1em;
+			border-radius: 10px;
+
+			.list-item {
+				a {
+					color: $color-light;
+				}
+			}
+		}
+
+		.social-media {
+			display: flex;
+			gap: 2em;
+
+			i {
+				color: $primary-text-color;
+				font-size: 1.5rem;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&::before {
+				bottom: 200%;
+			}
+
+			.links-wrap {
+				display: flex;
+				justify-content: space-between;
+				padding: unset;
+				background: transparent;
+
+				.list-item {
+					a {
+						color: $primary-text-color;
+					}
+				}
+			}
+		}
+	}
+}

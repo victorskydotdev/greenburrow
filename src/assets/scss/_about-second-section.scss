@@ -1,0 +1,119 @@
+@import 'resets';
+
+.about-second-section {
+	min-height: 100vh;
+	margin-bottom: 6em;
+	position: relative;
+
+	.container {
+		width: 80%;
+		padding-top: 3em;
+		padding-left: 1em;
+		margin-bottom: 4em;
+		position: relative;
+		z-index: 3;
+
+		.masthead {
+			@include fontMixin();
+			position: relative;
+			margin-bottom: 2em;
+			color: $primary-text-color;
+
+			&::after {
+				content: '';
+				position: absolute;
+				height: 1px;
+				width: 100%;
+				left: 0;
+				top: 125%;
+				background: $primary-text-color;
+			}
+		}
+
+		.sub-text {
+			@include poppinsRegularMixin();
+			margin-bottom: 2em;
+			color: $secondary-text-color;
+		}
+
+		.btn-wrap {
+			.btn {
+				cursor: pointer;
+
+				&:nth-child(1) {
+					background: $primary-color;
+					border: none;
+					@include poppinsRegularMixin();
+					padding: 1em 2em;
+					border-radius: 10px;
+					color: $color-light;
+				}
+
+				&:nth-child(2) {
+					background: transparent;
+					border: 1px solid $secondary-text-color;
+					@include poppinsRegularMixin();
+					padding: 1em 2em;
+					border-radius: 10px;
+					color: $secondary-text-color;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			margin-left: 4em;
+
+			.masthead {
+				font-size: 3em;
+				max-width: 600px;
+				margin-bottom: 1.5em;
+
+				&::after {
+					left: -40%;
+					width: 140%;
+				}
+			}
+
+			.sub-text {
+				max-width: 450px;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			margin-left: 7em;
+			padding-top: 7em;
+			margin-bottom: 10em;
+
+			.masthead {
+				font-size: 3em;
+				max-width: 600px;
+
+				&::after {
+					left: -40%;
+					width: 140%;
+				}
+			}
+		}
+	}
+
+	.img-container {
+		width: 100%;
+		.tree-img-card {
+			width: 100%;
+		}
+
+		@media screen and (min-width: 43em) {
+			position: absolute;
+			width: 50%;
+			top: 60%;
+			right: 0;
+		}
+
+		@media screen and (min-width: 62em) {
+			position: absolute;
+			width: 60%;
+			top: 10%;
+			right: -10%;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+@import 'resets';
+
+.layout2 {
+	margin-bottom: 6em;
+
+	.container {
+		width: 80%;
+		padding-top: 3em;
+		padding-left: 1em;
+
+		.heading {
+			@include fontMixin();
+			position: relative;
+			margin-bottom: 1em;
+			color: $primary-text-color;
+			font-size: 2em;
+		}
+
+		.sub-text {
+			@include poppinsRegularMixin();
+			margin-bottom: 2em;
+			color: $secondary-text-color;
+			max-width: 500px;
+		}
+
+		@media screen and (min-width: 62em) {
+			margin-left: 7em;
+			padding-top: 7em;
+			margin-bottom: 3em;
+
+			.heading {
+				font-size: 3em;
+				max-width: 500px;
+				// background: orange;
+				// padding-left: 2em;
+				// border-radius: 15px;
+
+				&::after {
+					left: -40%;
+					width: 140%;
+				}
+			}
+		}
+	}
+
+	.img-wrap {
+		.img-card {
+			background: url('../images/tree.jpeg') center/cover, no-repeat;
+			height: 300px;
+
+			@media screen and (min-width: 43em) {
+				height: 400px;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			justify-content: center;
+
+			.img-card {
+				width: 82%;
+				border-radius: 20px;
+			}
+		}
+	}
+}

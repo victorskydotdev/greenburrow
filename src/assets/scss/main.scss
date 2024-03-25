@@ -1,0 +1,14 @@
+@use 'header' as *;
+@use 'hero' as *;
+@use 'layout2' as *;
+@use 'our-services' as *;
+@use 'clients-section' as *;
+@use 'footer' as *;
+
+// about style properties start here
+@use 'about-hero' as *;
+@use 'about-second-section' as *;
+@use 'about-third-section' as *;
+
+// contact style properties
+@use 'contact-form' as *;

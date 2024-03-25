@@ -1,0 +1,125 @@
+@import 'resets';
+
+.our-services-section {
+	min-height: 400px;
+	margin-bottom: 6em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		.text-container {
+			margin-bottom: 4em;
+			.heading {
+				@include fontMixin();
+				position: relative;
+				margin-bottom: 0.5em;
+				color: $primary-text-color;
+				text-align: center;
+				font-size: 2rem;
+
+				@media screen and (min-width: 43em) {
+					font-size: 3em;
+				}
+			}
+		}
+
+		.card-wrap {
+			margin: 0 auto;
+			display: grid;
+			gap: 2em;
+
+			.card {
+				min-height: 300px;
+				background: $primary-color;
+				width: 100%;
+				border-radius: 20px;
+				overflow: hidden;
+
+				.text-wrap {
+					padding: 2em;
+
+					.fa-solid {
+						color: $color-light;
+						font-size: 1.8rem;
+						display: inline-block;
+						margin-bottom: 1em;
+					}
+
+					.title {
+						color: $color-light;
+						margin-bottom: 1em;
+						@include poppinsMediumMixin();
+					}
+
+					.text {
+						@include poppinsRegularMixin();
+						color: $color-light;
+					}
+				}
+
+				.img-wrap {
+					background: url('../images/tractor-field.jpeg') center/cover,
+						no-repeat;
+					height: 300px;
+					width: 100%;
+				}
+
+				.img-wrap2 {
+					background: url('../images/environmental-mngt.jpeg') center/cover,
+						no-repeat;
+					height: 300px;
+					width: 100%;
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				.card {
+					.text-wrap {
+						max-width: 500px;
+					}
+				}
+			}
+
+			@media screen and (min-width: 62em) {
+				width: 90%;
+				// display: flex;
+
+				.flexbox {
+					height: 350px;
+					display: flex;
+					align-items: center;
+
+					.text-wrap {
+						max-width: unset;
+						width: 100%;
+					}
+
+					.img-wrap {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.grid-card-at-62em {
+					height: 350px;
+					display: grid;
+					grid-template-areas: 'img-wrap2 text-wrap';
+					grid-template-columns: repeat(2, 1fr);
+					place-items: center;
+
+					.text-wrap {
+						grid-area: text-wrap;
+						width: 100%;
+					}
+
+					.img-wrap2 {
+						grid-area: img-wrap2;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
