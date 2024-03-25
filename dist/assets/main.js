@@ -126,7 +126,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_assets_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../src/assets/scss/main.scss */ \"./src/assets/scss/main.scss\");\n\n\nconsole.log('This is working');\n\n\n//# sourceURL=webpack://green_burrow/./src/assets/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_assets_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../src/assets/scss/main.scss */ \"./src/assets/scss/main.scss\");\n/* harmony import */ var _menu_interaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu-interaction */ \"./src/assets/js/menu-interaction.js\");\n\n\n\n(0,_menu_interaction__WEBPACK_IMPORTED_MODULE_1__.mobileNavFunct)();\n\n\n//# sourceURL=webpack://green_burrow/./src/assets/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/menu-interaction.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/menu-interaction.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   mobileNavFunct: () => (/* binding */ mobileNavFunct)\n/* harmony export */ });\nconst openMenu = document.getElementById('open-menu');\nconst closeMenu = document.getElementById('close-menu');\nconst mobileNav = document.getElementById('mobile-nav');\n\nconst mobileNavFunct = () => {\n\topenMenu.addEventListener('click', () => {\n\t\tmobileNav.style.display = 'grid';\n\t\topenMenu.style.display = 'none';\n\t\tcloseMenu.style.display = 'block';\n\t});\n\n\tcloseMenu.addEventListener('click', () => {\n\t\tmobileNav.style.display = 'none';\n\t\tcloseMenu.style.display = 'none';\n\t\topenMenu.style.display = 'block';\n\t});\n};\n\n\n\n\n//# sourceURL=webpack://green_burrow/./src/assets/js/menu-interaction.js?");
 
 /***/ }),
 
