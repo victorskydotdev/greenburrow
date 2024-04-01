@@ -1,10 +1,12 @@
 @import 'resets';
 
 .footer {
-	padding-bottom: 2em;
+	padding-bottom: 1em;
+
 	.container {
 		width: 90%;
 		margin: 0 auto;
+		margin-bottom: 1.8em;
 
 		display: grid;
 		gap: 2em;
@@ -65,6 +67,42 @@
 					}
 				}
 			}
+		}
+	}
+
+	.copyright-wrap {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 1em;
+
+		.office {
+			display: grid;
+			gap: 0.5em;
+
+			.address {
+				@include poppinsMediumMixin();
+				color: $primary-color;
+			}
+
+			.text {
+				line-height: 1.6;
+				@include poppinsRegularMixin();
+				font-size: 0.9rem;
+			}
+		}
+
+		.text {
+			line-height: 1.6;
+			@include poppinsRegularMixin();
+			font-size: 0.9rem;
+			color: $secondary-text-color;
+		}
+
+		@media screen and (min-width: 43em) {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
 		}
 	}
 }

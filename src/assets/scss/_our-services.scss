@@ -43,7 +43,7 @@
 						color: $color-light;
 						font-size: 1.8rem;
 						display: inline-block;
-						margin-bottom: 1em;
+						margin-bottom: 0.7em;
 					}
 
 					.title {
@@ -55,6 +55,13 @@
 					.text {
 						@include poppinsRegularMixin();
 						color: $color-light;
+						display: grid;
+						gap: 1em;
+						padding-left: 2em;
+
+						li {
+							list-style: disc;
+						}
 					}
 				}
 
@@ -89,10 +96,12 @@
 					height: 350px;
 					display: flex;
 					align-items: center;
+					// padding-bottom: 2em;
 
 					.text-wrap {
 						max-width: unset;
 						width: 100%;
+						min-height: 100%;
 					}
 
 					.img-wrap {
@@ -102,7 +111,7 @@
 				}
 
 				.grid-card-at-62em {
-					height: 350px;
+					min-height: 350px;
 					display: grid;
 					grid-template-areas: 'img-wrap2 text-wrap';
 					grid-template-columns: repeat(2, 1fr);

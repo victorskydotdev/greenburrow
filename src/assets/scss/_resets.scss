@@ -57,3 +57,16 @@ a {
 	font-weight: 700;
 	font-style: normal;
 }
+
+.hidden {
+	opacity: 0;
+	filter: blur(10px);
+	transform: translateY(100px);
+	transition: all 1s;
+}
+
+.show-layout {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+}

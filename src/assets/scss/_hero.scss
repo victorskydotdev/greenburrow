@@ -3,6 +3,64 @@
 .hero-section {
 	min-height: 100vh;
 	margin-bottom: 6em;
+	position: relative;
+
+	.animate-text-wrap {
+		// position: absolute;
+		top: 0;
+		right: 0;
+		display: none;
+
+		@media screen and (min-width: 62em) {
+			display: block;
+			top: 15%;
+
+			h2 {
+				font-size: 6rem;
+				color: $primary-color;
+				line-height: 0.8;
+			}
+
+			.starting-text {
+				position: absolute;
+				right: 0;
+				top: 27%;
+			}
+
+			.resilient {
+				position: absolute;
+				right: 0;
+				top: 27%;
+			}
+
+			.text-hidden {
+				opacity: 0;
+				filter: blur(10px);
+				transition: all 500ms;
+			}
+
+			.sustainable {
+				position: absolute;
+				right: 0;
+				top: 27%;
+				opacity: 0;
+				filter: blur(10px);
+				transition: all 1s;
+			}
+
+			.show-animation {
+				opacity: 1;
+				filter: blur(0);
+			}
+
+			.future {
+				position: absolute;
+				top: 35%;
+				right: 0;
+			}
+		}
+	}
+
 	.container {
 		width: 80%;
 		padding-top: 3em;
@@ -40,7 +98,7 @@
 					background: $primary-color;
 					border: none;
 					@include poppinsRegularMixin();
-					padding: 1em 2em;
+					padding: 0.7em 1.3em;
 					border-radius: 10px;
 					color: $color-light;
 				}
@@ -49,7 +107,7 @@
 					background: transparent;
 					border: 1px solid $secondary-text-color;
 					@include poppinsRegularMixin();
-					padding: 1em 2em;
+					padding: 0.63em 1.3em;
 					border-radius: 10px;
 					color: $secondary-text-color;
 				}

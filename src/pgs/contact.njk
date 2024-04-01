@@ -5,30 +5,30 @@ layout: base.njk
 
 <section class="contact-form-section">
 	<div class="container">
-		<div class="contact-card">
+		<div class="contact-card hidden">
 			<i class="fa-solid fa-phone"></i>
 
 			<h3 class="heading">Call us</h3>
-			<p class="text">Mon - Fri from 8am - 5pm</p>
+			<p class="text">Mon - Sat from 8am - 5pm</p>
 
-			<a href="tel:+">08100784622</a>
+			<a href="tel:+2347085865214">+2347085865214</a>
 		</div>
 
-		<form name="contact" netlify class="contact-form">
-			<h3 class="title">Send us a message</h3>
-			<p>
+		<form name="contact" netlify class="contact-form hidden">
+			<h3 class="title hidden">Send us a message</h3>
+			<p class="hidden">
 				<input type="text" name="name" placeholder="Name" />
 			</p>
-			<p>
+			<p class="hidden">
 				<input type="email" name="email" placeholder="Email address" />
 			</p>
-			<p>
+			<p class="hidden">
 				<input type="text" name="phone" placeholder="Phone Number" />
 			</p>
-			<p>
+			<p class="hidden">
 				<textarea name="message" placeholder="Message" id="message"></textarea>
 			</p>
-			<p>
+			<p class="hidden">
 				<button type="submit">Send</button>
 			</p>
 		</form>
