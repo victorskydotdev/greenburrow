@@ -41,6 +41,19 @@
 			a {
 				color: $color-light;
 				text-decoration: underline;
+				display: inline-block;
+				margin-bottom: 2em;
+			}
+
+			.email-wrap {
+				margin-bottom: 1.5em;
+			}
+
+			.address-wrap {
+				.address {
+					color: $color-light;
+					line-height: 1.5;
+				}
 			}
 		}
 
