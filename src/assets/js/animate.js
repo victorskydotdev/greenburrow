@@ -2,7 +2,7 @@ const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			entry.target.classList.add('show-layout');
-		} // else entry.target.classList.remove('show-layout');
+		} else entry.target.classList.remove('show-layout');
 	});
 });
 
