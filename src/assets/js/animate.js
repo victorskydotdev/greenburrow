@@ -30,23 +30,25 @@ const hideText = () => {
 };
 
 hideText();
-const animateText = () => {
-	setInterval(() => {
-		isResilentVisible = !isResilentVisible;
-		isSustainableVisible = !isSustainableVisible;
+if (resilentAnime) {
+	const animateText = () => {
+		setInterval(() => {
+			isResilentVisible = !isResilentVisible;
+			isSustainableVisible = !isSustainableVisible;
 
-		if (isResilentVisible) {
-			resilentAnime.classList.remove('text-hidden');
-			resilentAnime.classList.add('show-animation');
-			sustainableAnime.classList.remove('show-animation');
-			sustainableAnime.classList.add('text-hidden');
-		} else {
-			resilentAnime.classList.remove('show-animation');
-			resilentAnime.classList.add('text-hidden');
-			sustainableAnime.classList.remove('text-hidden');
-			sustainableAnime.classList.add('show-animation');
-		}
-	}, 3000); // Interval set to 2 seconds
-};
+			if (isResilentVisible) {
+				resilentAnime.classList.remove('text-hidden');
+				resilentAnime.classList.add('show-animation');
+				sustainableAnime.classList.remove('show-animation');
+				sustainableAnime.classList.add('text-hidden');
+			} else {
+				resilentAnime.classList.remove('show-animation');
+				resilentAnime.classList.add('text-hidden');
+				sustainableAnime.classList.remove('text-hidden');
+				sustainableAnime.classList.add('show-animation');
+			}
+		}, 3000); // Interval set to 2 seconds
+	};
 
-window.addEventListener('DOMContentLoaded', animateText);
+	window.addEventListener('DOMContentLoaded', animateText);
+}
